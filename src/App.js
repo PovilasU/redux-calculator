@@ -137,6 +137,12 @@ function App() {
             =
           </button>
         </div>
+
+        <p>
+          <a href="https://github.com/PovilasU/redux-calculator">
+            Code link to GitHub
+          </a>
+        </p>
       </div>
     </div>
   );
