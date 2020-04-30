@@ -44,16 +44,16 @@ const CalcReducer = (state = [[], [], [], []], action) => {
         state[3] = num1 + num2;
       }
       if (state[1] == '-') {
-        state[3] = num1 + num2;
+        state[3] = num1 - num2;
       }
       if (state[1] == '/') {
-        state[3] = num1 + num2;
+        state[3] = num1 / num2;
       }
       if (state[1] == '*') {
-        state[3] = num1 + num2;
+        state[3] = num1 * num2;
       }
       if (state[1] == '%') {
-        state[3] = num1 + num2;
+        state[3] = num1 % num2;
       }
 
       return state;
