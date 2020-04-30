@@ -19,7 +19,7 @@ const CalcReducer = (state = [[], [], [], []], action) => {
     case 'FIVE':
       isNum2 ? (state[0] += 5) : (state[2] += 5);
       return state;
-    case 'SEX':
+    case 'SIX':
       isNum2 ? (state[0] += 6) : (state[2] += 6);
       return state;
     case 'SEVEN':
