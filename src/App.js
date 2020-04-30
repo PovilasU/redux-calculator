@@ -50,6 +50,40 @@ function App() {
           </div>
         )}
       </div>
+      <div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <span>Answer: 0</span>
+        </div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button">AC</button>
+          <button className="ui grey button">+/-</button>
+          <button className="ui grey button">%</button>
+          <button className="ui grey button">/</button>
+        </div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button">7</button>
+          <button className="ui grey button">8</button>
+          <button className="ui grey button">9</button>
+          <button className="ui grey button">X</button>
+        </div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button">4</button>
+          <button className="ui grey button">5</button>
+          <button className="ui grey button">6</button>
+          <button className="ui grey button">-</button>
+        </div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button">1</button>
+          <button className="ui grey button">2</button>
+          <button className="ui grey button">3</button>
+          <button className="ui grey button">+</button>
+        </div>
+        <div class="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button">0</button>
+          <button className="ui grey button">.</button>
+          <button className="ui grey button">=</button>
+        </div>
+      </div>
     </div>
   );
 }
