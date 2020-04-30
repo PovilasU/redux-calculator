@@ -21,3 +21,15 @@ export const divide = () => {
     type: 'DIVIDE',
   };
 };
+
+export const one = () => {
+  return {
+    type: 'ONE',
+  };
+};
+
+export const two = () => {
+  return {
+    type: 'TWO',
+  };
+};

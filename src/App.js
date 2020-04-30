@@ -2,9 +2,14 @@ import React from 'react';
 import './App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './actions/counterActions';
+import { one, two, plus, result, reset } from './actions/calcActions';
 import { loggedIn } from './actions/isLoggedInAction';
 
 function App() {
+  const firstNum = useSelector((state) => state.calc[0]);
+  const operator = useSelector((state) => state.calc[1]);
+  const secondNum = useSelector((state) => state.calc[2]);
+  const answer = useSelector((state) => state.calc[3]);
   const counter = useSelector((state) => state.count);
   const isLoggedIn = useSelector((state) => state.loggedIn);
 
@@ -51,37 +56,53 @@ function App() {
         )}
       </div>
       <div>
-        <div class="column" style={{ marginTop: '15px' }}>
-          <span>Answer: 0</span>
+        <div className="column" style={{ marginTop: '15px' }}>
+          <span>firsrNum: {firstNum}</span>
+          <br></br>
+          <span>operator: {operator}</span>
+          <br></br>
+          <span>secondNum: {secondNum}</span>
+          <br></br>
+          <span>Result: {answer}</span>
         </div>
-        <div class="column" style={{ marginTop: '15px' }}>
-          <button className="ui grey button">AC</button>
+        <div className="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button" onClick={() => dispatch(reset())}>
+            AC
+          </button>
           <button className="ui grey button">+/-</button>
           <button className="ui grey button">%</button>
           <button className="ui grey button">/</button>
         </div>
-        <div class="column" style={{ marginTop: '15px' }}>
+        <div className="column" style={{ marginTop: '15px' }}>
           <button className="ui grey button">7</button>
           <button className="ui grey button">8</button>
           <button className="ui grey button">9</button>
           <button className="ui grey button">X</button>
         </div>
-        <div class="column" style={{ marginTop: '15px' }}>
+        <div className="column" style={{ marginTop: '15px' }}>
           <button className="ui grey button">4</button>
           <button className="ui grey button">5</button>
           <button className="ui grey button">6</button>
           <button className="ui grey button">-</button>
         </div>
-        <div class="column" style={{ marginTop: '15px' }}>
-          <button className="ui grey button">1</button>
-          <button className="ui grey button">2</button>
+        <div className="column" style={{ marginTop: '15px' }}>
+          <button className="ui grey button" onClick={() => dispatch(one())}>
+            1
+          </button>
+          <button className="ui grey button" onClick={() => dispatch(two())}>
+            2
+          </button>
           <button className="ui grey button">3</button>
-          <button className="ui grey button">+</button>
+          <button className="ui grey button" onClick={() => dispatch(plus())}>
+            +
+          </button>
         </div>
-        <div class="column" style={{ marginTop: '15px' }}>
+        <div className="column" style={{ marginTop: '15px' }}>
           <button className="ui grey button">0</button>
           <button className="ui grey button">.</button>
-          <button className="ui grey button">=</button>
+          <button className="ui grey button" onClick={() => dispatch(result())}>
+            =
+          </button>
         </div>
       </div>
     </div>
