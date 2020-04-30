@@ -138,11 +138,18 @@ function App() {
           </button>
         </div>
 
+        <h2>About:</h2>
+        <p>
+          This is my Calculator implementation using React-Redux. I used example
+          code of simple counter and modified it to develop calculator
+        </p>
         <p>
           <a href="https://github.com/PovilasU/redux-calculator">
             Code link to GitHub
           </a>
         </p>
+        <p>For styling I used "semantic-ui" framework</p>
+        <p>Date: 1/5/2020</p>
       </div>
     </div>
   );
